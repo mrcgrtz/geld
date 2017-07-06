@@ -18,7 +18,7 @@ $ yarn add currency-format
 
 ## Usage
 
-```
+```js
 const currencyFormat = require('currency-format');
 
 const price = currencyFormat(42.95);

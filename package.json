@@ -1,0 +1,37 @@
+{
+  "name": "currency-format",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple currency formatter.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dreamseer/currency-format.git"
+  },
+  "author": {
+    "name": "Marc Görtz",
+    "email": "git@marcgoertz.de",
+    "url": "https://marcgoertz.de/"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "currency",
+    "format"
+  ],
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true
+  }
+}

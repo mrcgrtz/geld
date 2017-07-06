@@ -1,4 +1,4 @@
-# currency-format
+# currency-format [![Build Status](https://travis-ci.org/Dreamseer/currency-format.svg?branch=master)](https://travis-ci.org/Dreamseer/currency-format)
 
 > A simple currency formatter.
 

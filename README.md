@@ -7,13 +7,13 @@
 Using [npm](https://www.npmjs.com/get-npm):
 
 ```
-$ npm install currency-format
+$ npm install https://github.com/Dreamseer/currency-format.git
 ```
 
 Using [yarn](https://yarnpkg.com/):
 
 ```
-$ yarn add currency-format
+$ yarn add https://github.com/Dreamseer/currency-format.git
 ```
 
 ## Usage
@@ -21,8 +21,11 @@ $ yarn add currency-format
 ```js
 const currencyFormat = require('currency-format');
 
-const price = currencyFormat(42.95);
-console.log(price); // => '42,95&nbsp;€'
+const price1 = currencyFormat(42.95);
+console.log(price1); // => '42,95&nbsp;€'
+
+const price2 = currencyFormat(42, { zeroDecimals: '–' });
+console.log(price2); // => '42,–&nbsp;€'
 ```
 
 ## API
@@ -64,6 +67,11 @@ Default: `'.'`
 Type: `string`
 
 Default: `''`
+
+## Related
+
+* `[Number.toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)` provides native currency formatting.
+* [currency-formatter](https://github.com/smirzaei/currency-formatter) is a more powerful formatter.
 
 ## License
 

@@ -70,7 +70,7 @@ Default: `''`
 
 ## Related
 
-* `[Number.toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)` provides native currency formatting.
+* [`Number.toLocaleString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) provides native currency formatting.
 * [currency-formatter](https://github.com/smirzaei/currency-formatter) is a more powerful formatter.
 
 ## License

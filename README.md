@@ -21,8 +21,8 @@ $ yarn add geld
 ```js
 const geld = require('geld');
 
-const price1 = geld(42.95);
-console.log(price1); // => '42,95&nbsp;€'
+const price1 = geld(42.23);
+console.log(price1); // => '42,23&nbsp;€'
 
 const price2 = geld(42, { zeroDecimals: '–' });
 console.log(price2); // => '42,–&nbsp;€'
@@ -42,31 +42,31 @@ Required value to format.
 
 Type: `string`
 
-Default: `'€'`
+Currency symbol to use. Default: `'€'`
 
 #### options.decimals
 
 Type: `number`
 
-Default: `2`
+Amount of decimals. Default: `2`
 
 #### options.decimalSeparator
 
 Type: `string`
 
-Default: `','`
+Character for decimal separation, e.g. in `1,23`. Default: `','`
 
 #### options.orderSeparator
 
 Type: `string`
 
-Default: `'.'`
+Character for order separation, e.g. in `1.000.000`. Default: `'.'`
 
 #### options.zeroDecimals
 
 Type: `string`
 
-Default: `''`
+Character to use as a replacement for zero decimals, e.g. `1,–`. Default: `''`
 
 ## Related
 

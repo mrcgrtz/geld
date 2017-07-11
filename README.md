@@ -87,6 +87,17 @@ Type: `string`
 Character to use as a spacer between formatted value and currency symbol.
 Default: `'&nbsp;'`
 
+## FAQ
+
+### Why did you set these silly defaults? I prefer X.
+
+Of course geld’s defaults are opinionated:
+I’m from Germany, thus I set German Euro defaults.
+
+### How is the name written and pronounced?
+
+geld, not GELD or Geld. Pronounced [/ɡɛlt/](https://en.wiktionary.org/wiki/Geld).
+
 ## Related
 
 * [`Number.toLocaleString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) provides native currency formatting.

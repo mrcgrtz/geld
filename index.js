@@ -2,28 +2,39 @@
 
 const defaults = {
   currency: '€',
+  currencyPosition: 'after',
   decimals: 2,
   decimalSeparator: ',',
   orderSeparator: '.',
-  zeroDecimals: ''
+  zeroDecimals: '',
+  space: '&nbsp;'
 };
 
-module.exports = (price, options) => {
+module.exports = (value, options) => {
   const config = Object.assign({}, defaults, options);
 
-  if (isNaN(price) || price === null) {
+  if (isNaN(value) || value === null) {
     return '';
   }
-  price = Number(price);
-  price = price.toFixed(~~config.decimals);
+  value = Number(value);
+  value = value.toFixed(~~config.decimals);
 
-  const parts = price.split('.');
+  const parts = value.split('.');
   const fnums = parts[0];
   let dec = parts[1] ? config.decimalSeparator + parts[1] : '';
-  const curr = (config.currency) ? '&nbsp;' + config.currency : '';
+
+  let curr = '';
+  if (config.currency) {
+    curr = config.currencyPosition === 'before' ?
+      config.currency + config.space :
+      config.space + config.currency;
+  }
 
   // Do something with zero-valued decimals
-  if ((config.zeroDecimals !== null || config.zeroDecimals !== undefined) && (parseInt(parts[1], 10) === 0)) {
+  if (
+    (config.zeroDecimals !== null || config.zeroDecimals !== undefined) &&
+    parseInt(parts[1], 10) === 0
+  ) {
     if (config.zeroDecimals === '') {
       // Strip away zero-valued decimals
       dec = '';
@@ -33,8 +44,11 @@ module.exports = (price, options) => {
     }
   }
 
-  return fnums.replace(
-    /(\d)(?=(?:\d{3})+$)/g,
-    '$1' + config.orderSeparator
-  ) + dec + curr;
+  const formattedValue =
+    fnums.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
+  return config.currencyPosition === 'before' ?
+    // As in '$ 123'
+    curr + formattedValue :
+    // As in '123 €'
+    formattedValue + curr;
 };

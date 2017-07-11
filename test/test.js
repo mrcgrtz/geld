@@ -17,12 +17,14 @@ test('should format `2000` as `2.000 €`', t => {
   t.is(format(2000), '2.000&nbsp;€');
 });
 
-test('should format `"123456.789"` as `123,456.79 $`', t => {
+test('should format `"123456.789"` as `$123,456.79`', t => {
   t.is(format('123456.789', {
     currency: '$',
+    currencyPosition: 'before',
     decimalSeparator: '.',
-    orderSeparator: ','
-  }), '123,456.79&nbsp;$');
+    orderSeparator: ',',
+    space: ''
+  }), '$123,456.79');
 });
 
 test('should format `987.65` as `988 €`', t => {

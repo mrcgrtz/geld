@@ -42,31 +42,50 @@ Required value to format.
 
 Type: `string`
 
-Currency symbol to use. Default: `'€'`
+Currency symbol to use.
+Default: `'€'`
+
+#### options.currencyPosition
+
+Type: `string`
+
+Position of the currency symbol, either `'before'` or `'after'` the formatted value.
+Default: `'after'`
 
 #### options.decimals
 
 Type: `number`
 
-Amount of decimals. Default: `2`
+Amount of decimals.
+Default: `2`
 
 #### options.decimalSeparator
 
 Type: `string`
 
-Character for decimal separation, e.g. in `1,23`. Default: `','`
+Character for decimal separation, e.g. in `1,23`.
+Default: `','`
 
 #### options.orderSeparator
 
 Type: `string`
 
-Character for order separation, e.g. in `1.000.000`. Default: `'.'`
+Character for order separation, e.g. in `1.000.000`.
+Default: `'.'`
 
 #### options.zeroDecimals
 
 Type: `string`
 
-Character to use as a replacement for zero decimals, e.g. `1,–`. Default: `''`
+Character to use as a replacement for zero decimals, e.g. `1,–`.
+Default: `''`
+
+#### options.space
+
+Type: `string`
+
+Character to use as a spacer between formatted value and currency symbol.
+Default: `'&nbsp;'`
 
 ## Related
 

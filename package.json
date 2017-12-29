@@ -16,7 +16,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && nyc ava",
+    "test": "xo && flow check test/ && nyc ava",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
@@ -29,6 +29,7 @@
   "devDependencies": {
     "ava": "^0.20.0",
     "coveralls": "^3.0.0",
+    "flow-bin": "^0.62.0",
     "nyc": "^11.4.1",
     "xo": "^0.19.0"
   },

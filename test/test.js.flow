@@ -1,0 +1,26 @@
+// @flow
+const geld = require('../index.js.flow');
+
+geld(1);
+geld('1');
+
+(geld(1): string);
+
+geld(1.23);
+
+geld(100, { decimals: 0 });
+
+// $ExpectError - always returns a string
+(geld(1): number);
+// $ExpectError - always returns a string
+(geld(1.23): boolean);
+
+// $ExpectError - only accepts a number
+geld(true);
+
+// $ExpectError - decimals must be a number
+geld(1, { decimals: '3' });
+// $ExpectError - orderSeparator must be a string
+geld(1, { orderSeparator: 1 });
+// $ExpectError - orderSeparator must be either 'before' or 'after'
+geld(1, { currencyPosition: 'between' });

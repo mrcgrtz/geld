@@ -31,10 +31,7 @@ module.exports = (value, options) => {
   }
 
   // Do something with zero-valued decimals
-  if (
-    (config.zeroDecimals !== null || config.zeroDecimals !== undefined) &&
-    parseInt(parts[1], 10) === 0
-  ) {
+  if (typeof config.zeroDecimals === 'string' && parseInt(parts[1], 10) === 0) {
     if (config.zeroDecimals === '') {
       // Strip away zero-valued decimals
       dec = '';

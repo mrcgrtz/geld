@@ -1,4 +1,4 @@
-# geld [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)]
+# geld [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)](https://coveralls.io/github/Dreamseer/geld?branch=master)
 
 > geld is a minimal currency formatter.
 

@@ -45,10 +45,26 @@ test('should format `200` as `"200,00 €"`', t => {
   }), '200,00&nbsp;€');
 });
 
+test('should format `200` as `"200,00 €"` with non-string `zeroDecimals`', t => {
+  t.is(geld(200, {
+    zeroDecimals: null
+  }), '200,00&nbsp;€');
+});
+
+test('should format `200` as `"200" when no currency is provided`', t => {
+  t.is(geld(200, {
+    currency: null
+  }), '200');
+});
+
 test('should format `two` as empty string', t => {
   t.is(geld('two'), '');
 });
 
 test('should format `null` as empty string', t => {
   t.is(geld(null), '');
+});
+
+test('should format `undefined` as empty string', t => {
+  t.is(geld(undefined), '');
 });

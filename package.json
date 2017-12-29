@@ -1,6 +1,6 @@
 {
   "name": "geld",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "geld is a minimal currency formatter.",
   "license": "MIT",
   "repository": {
@@ -20,7 +20,8 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.js.flow"
   ],
   "keywords": [
     "currency",

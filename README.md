@@ -102,6 +102,7 @@ geld, not GELD or Geld. Pronounced [/ɡɛlt/](https://en.wiktionary.org/wiki/Gel
 
 ## Related
 
+* [geld-cli](https://github.com/dreamseer/geld-cli) is a CLI for geld.
 * [`Number.toLocaleString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) provides native currency formatting.
 * [currency-formatter](https://github.com/smirzaei/currency-formatter) is a more powerful formatter.
 

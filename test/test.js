@@ -1,5 +1,5 @@
 import test from 'ava';
-import geld from '../';
+import geld from '..';
 
 test('should format `2.15` as `"2,15 €"` ', t => {
   t.is(geld(2.15), '2,15&nbsp;€');

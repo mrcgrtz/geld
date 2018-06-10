@@ -24,10 +24,10 @@ $ yarn add geld
 const geld = require('geld');
 
 const price1 = geld(42.23);
-console.log(price1); // => '42,23&nbsp;€'
+console.log(price1); // => '42,23 €'
 
 const price2 = geld(42, { zeroDecimals: '–' });
-console.log(price2); // => '42,–&nbsp;€'
+console.log(price2); // => '42,– €'
 ```
 
 ## API
@@ -87,7 +87,7 @@ Default: `''`
 Type: `string`
 
 Character to use as a spacer between formatted value and currency symbol.
-Default: `'&nbsp;'`
+Default: `' '` (i.e. `U+00A0 NO-BREAK SPACE`)
 
 ## FAQ
 

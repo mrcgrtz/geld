@@ -7,7 +7,7 @@ const defaults = {
   decimalSeparator: ',',
   orderSeparator: '.',
   zeroDecimals: '',
-  space: '&nbsp;'
+  space: ' '
 };
 
 module.exports = (value, options) => {

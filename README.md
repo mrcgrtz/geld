@@ -32,7 +32,7 @@ console.log(price2); // => '42,– €'
 
 ## API
 
-### geld(value, options)
+### geld(value, [options])
 
 #### value
 

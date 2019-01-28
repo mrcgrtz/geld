@@ -29,17 +29,17 @@
     "format"
   ],
   "devDependencies": {
-    "ava": "^1.0.1",
+    "ava": "^1.2.0",
     "coveralls": "^3.0.1",
-    "flow-bin": "^0.89.0",
+    "flow-bin": "^0.91.0",
     "nyc": "^13.1.0",
     "pre-commit": "^1.2.2",
-    "xo": "^0.23.0"
-  },
-  "xo": {
-    "esnext": true,
-    "space": true
-  },
+    "xo": "^0.24.0"
+	},
+	"xo": {
+		"esnext": true,
+		"space": true
+	},
   "pre-commit": [
     "format",
     "test"

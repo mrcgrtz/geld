@@ -1,5 +1,5 @@
 # This file is for unifying the coding style for different editors
-# and IDEs. EditorConfig is awesome: http://EditorConfig.org
+# and IDEs. EditorConfig is awesome: https://editorconfig.org
 
 # ##############################################################################
 # # TOP-MOST .EDITORCONFIG FILE                                                #
@@ -10,9 +10,9 @@ root = true
 # # ALL FILES                                                                  #
 # ##############################################################################
 [*]
-# indent using 2 spaces
-indent_style = space
-indent_size = 2
+# indent using tabs
+indent_style = tab
+indent_size = tab
 tab_width = 2
 # Unix-style newlines with a newline ending every file
 end_of_line = lf

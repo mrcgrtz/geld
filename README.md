@@ -2,20 +2,20 @@
 
 > geld is a minimal currency formatter.
 
-![Update Status](https://img.shields.io/david/dev/dreamseer/geld.svg) [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)](https://coveralls.io/github/Dreamseer/geld?branch=master) [![Install size](https://packagephobia.now.sh/badge?p=geld@1.3.0)](https://packagephobia.now.sh/result?p=geld@1.3.0) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/master/LICENSE.md)
+![Update Status](https://img.shields.io/david/dev/dreamseer/geld.svg) [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)](https://coveralls.io/github/Dreamseer/geld?branch=master) [![Install size](https://packagephobia.now.sh/badge?p=geld)](https://packagephobia.now.sh/result?p=geld) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/master/LICENSE.md)
 
 ## Install
 
 Using [npm](https://www.npmjs.com/get-npm):
 
-```
-$ npm install geld --save
+```bash
+npm install geld --save
 ```
 
 Using [yarn](https://yarnpkg.com/):
 
-```
-$ yarn add geld
+```bash
+yarn add geld
 ```
 
 ## Usage
@@ -91,12 +91,12 @@ Default: `' '` (i.e. `U+00A0 NO-BREAK SPACE`)
 
 ## FAQ
 
-### Why did you set these silly defaults? I prefer X.
+### “Why did you set these silly defaults? I prefer X.”
 
 Of course geld’s defaults are opinionated:
 I’m from Germany, thus I set German Euro defaults.
 
-### How is the name written and pronounced?
+### “How is the name written and pronounced?”
 
 geld, not GELD or Geld. Pronounced [/ɡɛlt/](https://en.wiktionary.org/wiki/Geld).
 

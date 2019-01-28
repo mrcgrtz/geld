@@ -36,10 +36,6 @@
     "pre-commit": "^1.2.2",
     "xo": "^0.24.0"
 	},
-	"xo": {
-		"esnext": true,
-		"space": true
-	},
   "pre-commit": [
     "format",
     "test"

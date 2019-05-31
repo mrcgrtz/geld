@@ -2,7 +2,7 @@
 
 > geld is a minimal currency formatter.
 
-![Update Status](https://img.shields.io/david/dev/dreamseer/geld.svg) [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)](https://coveralls.io/github/Dreamseer/geld?branch=master) [![Install size](https://packagephobia.now.sh/badge?p=geld)](https://packagephobia.now.sh/result?p=geld) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/master/LICENSE.md)
+![Update Status](https://img.shields.io/david/dev/dreamseer/geld.svg) [![Build Status](https://travis-ci.org/Dreamseer/geld.svg?branch=master)](https://travis-ci.org/Dreamseer/geld) [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=master)](https://coveralls.io/github/Dreamseer/geld?branch=master) [![Install size](https://packagephobia.now.sh/badge?p=geld)](https://packagephobia.now.sh/result?p=geld) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/master/LICENSE.md) [![Greenkeeper badge](https://badges.greenkeeper.io/Dreamseer/geld.svg)](https://greenkeeper.io/)
 
 ## Install
 

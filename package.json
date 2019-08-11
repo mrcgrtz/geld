@@ -29,9 +29,9 @@
     "format"
   ],
   "devDependencies": {
-    "ava": "^2.1.0",
-    "coveralls": "^3.0.4",
-    "flow-bin": "^0.105.0",
+    "ava": "^2.2.0",
+    "coveralls": "^3.0.6",
+    "flow-bin": "^0.105.1",
     "nyc": "^14.1.1",
     "pre-commit": "^1.2.2",
     "xo": "^0.24.0"

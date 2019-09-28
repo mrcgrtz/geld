@@ -42,7 +42,7 @@ module.exports = (value, options) => {
 	}
 
 	const formattedValue =
-		fnums.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
+		fnums.replace(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
 	return config.currencyPosition === 'before' ?
 		// As in '$ 123'
 		curr + formattedValue :

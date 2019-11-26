@@ -30,7 +30,7 @@
   ],
   "devDependencies": {
     "ava": "^2.4.0",
-    "coveralls": "^3.0.6",
+    "coveralls": "^3.0.8",
     "flow-bin": "^0.112.0",
     "nyc": "^14.1.1",
     "pre-commit": "^1.2.2",

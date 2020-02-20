@@ -29,12 +29,12 @@
     "format"
   ],
   "devDependencies": {
-    "ava": "^3.2.0",
+    "ava": "^3.3.0",
     "coveralls": "^3.0.9",
     "flow-bin": "^0.118.0",
     "nyc": "^15.0.0",
     "pre-commit": "^1.2.2",
-    "xo": "^0.26.0"
+    "xo": "^0.26.1"
   },
   "pre-commit": [
     "format",

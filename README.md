@@ -9,7 +9,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![Flow](https://img.shields.io/npm/types/geld)](https://flow.org/)
 [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/master/LICENSE.md)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Dreamseer/geld.svg)](https://greenkeeper.io/)
+
 
 ## Install
 

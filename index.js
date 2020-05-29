@@ -12,7 +12,7 @@ module.exports = (value, options) => {
 		...options
 	};
 
-	if (isNaN(value) || value === null) {
+	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
 		return '';
 	}
 
@@ -31,7 +31,7 @@ module.exports = (value, options) => {
 	}
 
 	// Do something with zero-valued decimals
-	if (parseInt(parts[1], 10) === 0 && config.zeroDecimals !== undefined) {
+	if (Number.parseInt(parts[1], 10) === 0 && config.zeroDecimals !== undefined) {
 		if (config.zeroDecimals === '' || config.zeroDecimals === null) {
 			// Strip away zero-valued decimals
 			dec = '';

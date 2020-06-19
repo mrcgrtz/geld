@@ -3,4 +3,3 @@
 
 [options]
 emoji=true
-suppress_comment=\\(.\\|\n\\)*\\$ExpectError

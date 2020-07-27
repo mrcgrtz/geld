@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/Dreamseer/geld.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": {
     "name": "Marc Görtz",
     "email": "git@marcgoertz.de",

@@ -7,6 +7,10 @@
     "type": "git",
     "url": "https://github.com/Dreamseer/geld.git"
   },
+  "funding": {
+    "type": "kofi",
+    "url": "https://ko-fi.com/dreamseer"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

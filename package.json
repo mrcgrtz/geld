@@ -36,7 +36,7 @@
     "format"
   ],
   "devDependencies": {
-    "ava": "^3.10.1",
+    "ava": "^3.11.1",
     "coveralls": "^3.1.0",
     "flow-bin": "^0.130.0",
     "nyc": "^15.1.0",

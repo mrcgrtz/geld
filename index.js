@@ -17,7 +17,7 @@ module.exports = (value, options) => {
 	}
 
 	value = Number(value);
-	value = value.toFixed(~~config.decimals);
+	value = value.toFixed(Math.trunc(config.decimals));
 
 	const parts = value.split('.');
 	const fnums = parts[0];
@@ -32,13 +32,7 @@ module.exports = (value, options) => {
 
 	// Do something with zero-valued decimals
 	if (Number.parseInt(parts[1], 10) === 0 && config.zeroDecimals !== undefined) {
-		if (config.zeroDecimals === '' || config.zeroDecimals === null) {
-			// Strip away zero-valued decimals
-			dec = '';
-		} else {
-			// Add custom string
-			dec = config.decimalSeparator + config.zeroDecimals;
-		}
+		dec = config.zeroDecimals === '' || config.zeroDecimals === null ? '' : config.decimalSeparator + config.zeroDecimals;
 	}
 
 	const formattedValue =

@@ -11,9 +11,6 @@
     "type": "kofi",
     "url": "https://ko-fi.com/dreamseer"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": {
     "name": "Marc Görtz",
     "email": "git@marcgoertz.de",

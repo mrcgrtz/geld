@@ -21,27 +21,33 @@
   },
   "scripts": {
     "format": "xo --fix",
-    "test": "xo && flow check test/ && nyc ava",
+    "test": "xo && flow check test/ && tsd && nyc ava",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
     "index.js",
-    "index.js.flow"
+    "index.js.flow",
+		"index.d.ts"
   ],
   "keywords": [
     "currency",
     "format"
   ],
   "devDependencies": {
+    "@types/node": "^15.0.2",
     "ava": "^3.15.0",
     "coveralls": "^3.1.0",
     "flow-bin": "^0.150.0",
     "nyc": "^15.1.0",
     "pre-commit": "^1.2.2",
+    "tsd": "^0.14.0",
     "xo": "^0.39.1"
   },
   "pre-commit": [
     "format",
     "test"
-  ]
+  ],
+	"tsd": {
+		"directory": "test"
+	}
 }

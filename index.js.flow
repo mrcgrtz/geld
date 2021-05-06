@@ -1,14 +1,16 @@
 // @flow
 
+interface GeldOptions {
+	currency?: string;
+	currencyPosition?: 'before' | 'after';
+	decimals?: number;
+	decimalSeparator?: string;
+	orderSeparator?: string;
+	zeroDecimals?: string;
+	space?: string;
+}
+
 declare module.exports: (
 	value: number | string,
-	options?: {
-		currency?: string,
-		currencyPosition?: 'before' | 'after',
-		decimals?: number,
-		decimalSeparator?: string,
-		orderSeparator?: string,
-		zeroDecimals?: string,
-		space?: string
-	}
+	options?: GeldOptions
 ) => string;

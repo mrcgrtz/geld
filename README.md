@@ -10,7 +10,6 @@
 [![Flow](https://img.shields.io/npm/types/geld)](https://flow.org/)
 [![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/main/LICENSE.md)
 
-
 ## Install
 
 Using [npm](https://www.npmjs.com/get-npm):

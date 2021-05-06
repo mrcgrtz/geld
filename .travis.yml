@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - 'lts/*'
-after_success: yarn run coveralls
+after_success: npm run-script coveralls

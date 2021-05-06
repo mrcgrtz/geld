@@ -1,6 +1,6 @@
 {
   "name": "geld",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "geld is a minimal currency formatter.",
   "license": "MIT",
   "repository": {
@@ -27,7 +27,7 @@
   "files": [
     "index.js",
     "index.js.flow",
-		"index.d.ts"
+    "index.d.ts"
   ],
   "keywords": [
     "currency",
@@ -47,7 +47,7 @@
     "format",
     "test"
   ],
-	"tsd": {
-		"directory": "test"
-	}
+  "tsd": {
+    "directory": "test"
+  }
 }

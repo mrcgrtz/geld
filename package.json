@@ -19,6 +19,7 @@
   "engines": {
     "node": ">=10"
   },
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "format": "xo --fix",

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (value, options) => {
+const geld = (value, options) => {
 	const config = {
 		currency: '€',
 		currencyPosition: 'after',
@@ -43,3 +43,5 @@ module.exports = (value, options) => {
 		// As in '123 €'
 		formattedValue + curr;
 };
+
+export default geld;

@@ -1,5 +1,5 @@
 // @flow
-const geld = require('../index.js.flow');
+import geld from '../index.js.flow';
 
 geld(1);
 geld('1');

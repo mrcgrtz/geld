@@ -19,10 +19,11 @@
   "engines": {
     "node": ">=10"
   },
+  "type": "module",
   "scripts": {
     "format": "xo --fix",
-    "test": "xo && flow check test/ && tsd && nyc ava",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "test": "xo && flow check test/ && tsd && c8 ava",
+    "coveralls": "c8 report --reporter=text-lcov | coveralls"
   },
   "files": [
     "index.js",
@@ -36,9 +37,9 @@
   "devDependencies": {
     "@types/node": "^15.0.2",
     "ava": "^3.15.0",
+    "c8": "^7.7.2",
     "coveralls": "^3.1.0",
     "flow-bin": "^0.150.0",
-    "nyc": "^15.1.0",
     "pre-commit": "^1.2.2",
     "tsd": "^0.14.0",
     "xo": "^0.39.1"

@@ -10,7 +10,7 @@ interface GeldOptions {
 	space?: string;
 }
 
-declare module.exports: (
+declare export default function geld(
 	value: number | string,
 	options?: GeldOptions
-) => string;
+): string;

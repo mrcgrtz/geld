@@ -1,5 +1,5 @@
 import {expectType, expectNotType, expectError} from 'tsd';
-import geld = require('..');
+import geld from '../index.js';
 
 expectType<string>(geld(1));
 expectType<string>(geld('1'));

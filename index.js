@@ -1,5 +1,3 @@
-'use strict';
-
 const geld = (value, options) => {
 	const config = {
 		currency: '€',

@@ -1,5 +1,3 @@
-/// <reference types="node"/>
-
 declare namespace Geld {
 	interface Options {
 		currency?: string;

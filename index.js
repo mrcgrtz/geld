@@ -7,7 +7,7 @@ const geld = (value, options) => {
 		orderSeparator: '.',
 		zeroDecimals: '',
 		space: ' ',
-		...options
+		...options,
 	};
 
 	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
@@ -23,9 +23,9 @@ const geld = (value, options) => {
 
 	let curr = '';
 	if (config.currency) {
-		curr = config.currencyPosition === 'before' ?
-			config.currency + config.space :
-			config.space + config.currency;
+		curr = config.currencyPosition === 'before'
+			? config.currency + config.space
+			: config.space + config.currency;
 	}
 
 	// Do something with zero-valued decimals
@@ -33,13 +33,13 @@ const geld = (value, options) => {
 		dec = config.zeroDecimals === '' || config.zeroDecimals === null ? '' : config.decimalSeparator + config.zeroDecimals;
 	}
 
-	const formattedValue =
-		fnums.replace(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
-	return config.currencyPosition === 'before' ?
+	const formattedValue
+		= fnums.replace(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
+	return config.currencyPosition === 'before'
 		// As in '$ 123'
-		curr + formattedValue :
+		? curr + formattedValue
 		// As in '123 €'
-		formattedValue + curr;
+		: formattedValue + curr;
 };
 
 export default geld;

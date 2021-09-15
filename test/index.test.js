@@ -23,49 +23,49 @@ test('should format `"123456.789"` as `"$123,456.79"`', t => {
 		currencyPosition: 'before',
 		decimalSeparator: '.',
 		orderSeparator: ',',
-		space: ''
+		space: '',
 	}), '$123,456.79');
 });
 
 test('should format `987.65` as `"988 €"`', t => {
 	t.is(geld(987.65, {
-		decimals: 0
+		decimals: 0,
 	}), '988 €');
 });
 
 test('should format `200` as `"200,- €"`', t => {
 	t.is(geld(200, {
-		zeroDecimals: '-'
+		zeroDecimals: '-',
 	}), '200,- €');
 });
 
 test('should format `200` as `"200,00 €"`', t => {
 	t.is(geld(200, {
-		zeroDecimals: '00'
+		zeroDecimals: '00',
 	}), '200,00 €');
 });
 
 test('should format `200` as `"200 €"` with `zeroDecimals` set to an empty string', t => {
 	t.is(geld(200, {
-		zeroDecimals: ''
+		zeroDecimals: '',
 	}), '200 €');
 });
 
 test('should format `200` as `"200 €"` with `zeroDecimals` set to `null`', t => {
 	t.is(geld(200, {
-		zeroDecimals: null
+		zeroDecimals: null,
 	}), '200 €');
 });
 
 test('should format `200` as `"200" when no currency is provided`', t => {
 	t.is(geld(200, {
-		currency: null
+		currency: null,
 	}), '200');
 });
 
 test('should format `200` as `"200&nbsp;€" when a non-breaking space entity is provided`', t => {
 	t.is(geld(200, {
-		space: '&nbsp;'
+		space: '&nbsp;',
 	}), '200&nbsp;€');
 });
 

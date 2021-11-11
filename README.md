@@ -2,7 +2,6 @@
 
 > geld is a minimal currency formatter.
 
-![Update Status](https://img.shields.io/david/dev/dreamseer/geld.svg)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dreamseer/geld/default/main)
 [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=main)](https://coveralls.io/github/Dreamseer/geld?branch=main)
 [![Install size](https://packagephobia.now.sh/badge?p=geld)](https://packagephobia.now.sh/result?p=geld)

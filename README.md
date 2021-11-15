@@ -26,7 +26,7 @@ yarn add geld
 ## Usage
 
 ```js
-const geld = require('geld');
+import geld from 'geld';
 
 const price1 = geld(42.23);
 console.log(price1); // => '42,23 €'

@@ -3,14 +3,17 @@
   "version": "2.0.0",
   "description": "geld is a minimal currency formatter.",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Dreamseer/geld.git"
-  },
-  "funding": {
-    "type": "kofi",
-    "url": "https://ko-fi.com/mrcgrtz"
-  },
+  "repository": "github:mrcgrtz/geld",
+  "funding": [
+  	{
+      "type": "kofi",
+      "url": "https://ko-fi.com/mrcgrtz"
+    },
+  	{
+      "type": "liberapay",
+      "url": "https://liberapay.com/mrcgrtz"
+    }
+  ],
   "author": {
     "name": "Marc Görtz",
     "email": "git@marcgoertz.de",

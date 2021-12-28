@@ -2,12 +2,12 @@
 
 > geld is a minimal currency formatter.
 
-[![Test](https://github.com/Dreamseer/geld/actions/workflows/test.yml/badge.svg)](https://github.com/Dreamseer/geld/actions/workflows/test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/Dreamseer/geld/badge.svg?branch=main)](https://coveralls.io/github/Dreamseer/geld?branch=main)
+[![Test](https://github.com/mrcgrtz/geld/actions/workflows/test.yml/badge.svg)](https://github.com/mrcgrtz/geld/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/mrcgrtz/geld/badge.svg?branch=main)](https://coveralls.io/github/mrcgrtz/geld?branch=main)
 [![Install size](https://packagephobia.now.sh/badge?p=geld)](https://packagephobia.now.sh/result?p=geld)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![Types](https://img.shields.io/npm/types/geld)](https://www.typescriptlang.org/)
-[![MIT license](https://img.shields.io/github/license/dreamseer/geld.svg)](https://github.com/Dreamseer/geld/blob/main/LICENSE.md)
+[![MIT license](https://img.shields.io/github/license/mrcgrtz/geld.svg)](https://github.com/mrcgrtz/geld/blob/main/LICENSE.md)
 
 ## Install
 
@@ -107,7 +107,7 @@ geld, not GELD or Geld. Pronounced [/ɡɛlt/](https://en.wiktionary.org/wiki/Gel
 
 ## Related
 
-* [geld-cli](https://github.com/dreamseer/geld-cli) is a CLI for geld.
+* [geld-cli](https://github.com/mrcgrtz/geld-cli) is a CLI for geld.
 * [`Number.toLocaleString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) provides native currency formatting.
 * [currency-formatter](https://github.com/smirzaei/currency-formatter) is a more powerful formatter.
 

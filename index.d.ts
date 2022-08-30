@@ -1,5 +1,5 @@
 declare namespace Geld {
-	interface Options {
+	type Options = {
 		currency?: string;
 		currencyPosition?: 'before' | 'after';
 		decimals?: number;
@@ -7,7 +7,7 @@ declare namespace Geld {
 		orderSeparator?: string;
 		zeroDecimals?: string;
 		space?: string;
-	}
+	};
 }
 
 declare function geld(

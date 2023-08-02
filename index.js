@@ -34,7 +34,7 @@ const geld = (value, options) => {
 	}
 
 	const formattedValue
-		= fnums.replace(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
+		= fnums.replaceAll(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
 	return config.currencyPosition === 'before'
 		// As in '$ 123'
 		? curr + formattedValue

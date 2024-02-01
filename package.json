@@ -5,11 +5,11 @@
   "license": "MIT",
   "repository": "github:mrcgrtz/geld",
   "funding": [
-  	{
+    {
       "type": "kofi",
       "url": "https://ko-fi.com/mrcgrtz"
     },
-  	{
+    {
       "type": "liberapay",
       "url": "https://liberapay.com/mrcgrtz"
     }
@@ -25,8 +25,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "xo && tsd && c8 ava",
-    "coverage": "c8 report --reporter=lcov"
+    "coverage": "c8 report --reporter=lcov",
+    "prepare": "husky",
+    "test": "xo && tsd && c8 ava"
   },
   "files": [
     "index.js",

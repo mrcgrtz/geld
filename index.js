@@ -21,9 +21,9 @@ const geld = (value, options) => {
 	const fnums = parts[0];
 	let dec = parts[1] ? config.decimalSeparator + parts[1] : '';
 
-	let curr = '';
+	let currency = '';
 	if (config.currency) {
-		curr = config.currencyPosition === 'before'
+		currency = config.currencyPosition === 'before'
 			? config.currency + config.space
 			: config.space + config.currency;
 	}
@@ -37,9 +37,9 @@ const geld = (value, options) => {
 		= fnums.replaceAll(/(?<num>\d)(?=(?:\d{3})+$)/g, '$1' + config.orderSeparator) + dec;
 	return config.currencyPosition === 'before'
 		// As in '$ 123'
-		? curr + formattedValue
+		? currency + formattedValue
 		// As in '123 €'
-		: formattedValue + curr;
+		: formattedValue + currency;
 };
 
 export default geld;

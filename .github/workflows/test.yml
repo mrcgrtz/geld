@@ -14,7 +14,7 @@ jobs:
         node-version: [lts/hydrogen, lts/*, current]
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v6.0.0
       with:

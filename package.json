@@ -44,6 +44,9 @@
     "tsd": "^0.33.0",
     "xo": "^1.2.3"
   },
+  "overrides": {
+    "yargs": "^18.0.0"
+  },
   "lint-staged": {
     "*.js": "xo --fix"
   },

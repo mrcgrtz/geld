@@ -42,7 +42,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "tsd": "^0.33.0",
-    "xo": "^1.2.3"
+    "xo": "^2.0.2"
   },
   "overrides": {
     "yargs": "^18.0.0"
@@ -52,5 +52,11 @@
   },
   "tsd": {
     "directory": "test"
+  },
+  "xo": {
+    "ignores": [
+      "**/*.d.ts",
+      "**/*.test-d.ts"
+    ]
   }
 }

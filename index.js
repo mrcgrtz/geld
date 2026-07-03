@@ -1,4 +1,8 @@
-const geld = (value, options) => {
+const geld = (value, options = {}) => {
+	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
+		return '';
+	}
+
 	const config = {
 		currency: '€',
 		currencyPosition: 'after',
@@ -9,10 +13,6 @@ const geld = (value, options) => {
 		space: ' ',
 		...options,
 	};
-
-	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
-		return '';
-	}
 
 	value = Number(value);
 	value = value.toFixed(Math.trunc(config.decimals));
@@ -29,12 +29,19 @@ const geld = (value, options) => {
 	}
 
 	// Do something with zero-valued decimals
-	if (Number.parseInt(parts[1], 10) === 0 && config.zeroDecimals !== undefined) {
+	if (Math.trunc(Number(parts[1])) === 0 && config.zeroDecimals !== undefined) {
 		dec = config.zeroDecimals === '' || config.zeroDecimals === null ? '' : config.decimalSeparator + config.zeroDecimals;
 	}
 
-	const formattedValue
-		= fnums.replaceAll(/(?<num>\d)(?=(?:\d{3})+$)/gv, '$1' + config.orderSeparator) + dec;
+	const formattedValue = (() => {
+		const groups = [];
+		for (let i = fnums.length; i > 0; i -= 3) {
+			groups.unshift(fnums.slice(Math.max(0, i - 3), i));
+		}
+
+		return groups.join(config.orderSeparator) + dec;
+	})();
+
 	return config.currencyPosition === 'before'
 		// As in '$ 123'
 		? currency + formattedValue

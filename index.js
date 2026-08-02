@@ -1,4 +1,4 @@
-const geld = (value, options = {}) => {
+export default function geld(value, options = {}) {
 	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
 		return '';
 	}
@@ -47,6 +47,4 @@ const geld = (value, options = {}) => {
 		? currency + formattedValue
 		// As in '123 €'
 		: formattedValue + currency;
-};
-
-export default geld;
+}

@@ -2,24 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert';
 import geld from '../index.js';
 
-test('should format `2.15` as `"2,15 €"` ', () => {
-	assert.equal(geld(2.15), '2,15 €');
+test('should format `2.15` as `"2,15 €"`', () => {
+	assert.strictEqual(geld(2.15), '2,15 €');
 });
 
 test('should format `"2.15"` as `"2,15 €"`', () => {
-	assert.equal(geld('2.15'), '2,15 €');
+	assert.strictEqual(geld('2.15'), '2,15 €');
 });
 
 test('should format `2` as `"2 €"`', () => {
-	assert.equal(geld(2), '2 €');
+	assert.strictEqual(geld(2), '2 €');
 });
 
 test('should format `2000` as `"2.000 €"`', () => {
-	assert.equal(geld(2000), '2.000 €');
+	assert.strictEqual(geld(2000), '2.000 €');
 });
 
 test('should format `"123456.789"` as `"$123,456.79"`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld('123456.789', {
 			currency: '$',
 			currencyPosition: 'before',
@@ -32,7 +32,7 @@ test('should format `"123456.789"` as `"$123,456.79"`', () => {
 });
 
 test('should format `987.65` as `"988 €"`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(987.65, {
 			decimals: 0,
 		}),
@@ -41,7 +41,7 @@ test('should format `987.65` as `"988 €"`', () => {
 });
 
 test('should format `200` as `"200,- €"`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			zeroDecimals: '-',
 		}),
@@ -50,7 +50,7 @@ test('should format `200` as `"200,- €"`', () => {
 });
 
 test('should format `200` as `"200,00 €"`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			zeroDecimals: '00',
 		}),
@@ -59,7 +59,7 @@ test('should format `200` as `"200,00 €"`', () => {
 });
 
 test('should format `200` as `"200 €"` with `zeroDecimals` set to an empty string', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			zeroDecimals: '',
 		}),
@@ -68,7 +68,7 @@ test('should format `200` as `"200 €"` with `zeroDecimals` set to an empty st
 });
 
 test('should format `200` as `"200 €"` with `zeroDecimals` set to `null`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			zeroDecimals: null,
 		}),
@@ -77,7 +77,7 @@ test('should format `200` as `"200 €"` with `zeroDecimals` set to `null`', ()
 });
 
 test('should format `200` as `"200" when no currency is provided`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			currency: null,
 		}),
@@ -86,7 +86,7 @@ test('should format `200` as `"200" when no currency is provided`', () => {
 });
 
 test('should format `200` as `"200&nbsp;€" when a non-breaking space entity is provided`', () => {
-	assert.equal(
+	assert.strictEqual(
 		geld(200, {
 			space: '&nbsp;',
 		}),
@@ -95,13 +95,13 @@ test('should format `200` as `"200&nbsp;€" when a non-breaking space entity is
 });
 
 test('should format `two` as empty string', () => {
-	assert.equal(geld('two'), '');
+	assert.strictEqual(geld('two'), '');
 });
 
 test('should format `null` as empty string', () => {
-	assert.equal(geld(null), '');
+	assert.strictEqual(geld(null), '');
 });
 
 test('should format `undefined` as empty string', () => {
-	assert.equal(geld(undefined), '');
+	assert.strictEqual(geld(undefined), '');
 });

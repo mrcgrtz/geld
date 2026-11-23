@@ -44,6 +44,7 @@ console.log(price2); // => '42,– €'
 Type: `number` or `string`
 
 Required value to format.
+Pass a string to keep full decimal precision, e.g. `'12345678901234567.89'`.
 
 #### options.currency
 

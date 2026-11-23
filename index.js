@@ -17,11 +17,13 @@ export default function geld(value, options = {}) {
 	const decimals = Math.trunc(config.decimals);
 
 	// Let Intl do rounding and digit grouping in a fixed locale,
-	// then swap in our own separators
+	// then swap in our own separators. Strings are passed as-is
+	// so Intl can treat them as exact decimals.
 	const parts = new Intl.NumberFormat('en-US', {
 		minimumFractionDigits: decimals,
 		maximumFractionDigits: decimals,
-	}).formatToParts(Number(value));
+		signDisplay: 'negative',
+	}).formatToParts(typeof value === 'string' ? value : Number(value));
 
 	const fraction = parts.find(part => part.type === 'fraction')?.value;
 

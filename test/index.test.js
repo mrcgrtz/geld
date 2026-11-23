@@ -121,3 +121,15 @@ test('should format `1.005` as `"1,01 €"`', () => {
 test('should format `1e21` without exponent notation', () => {
 	assert.strictEqual(geld(1e21, {decimals: 0}), '1.000.000.000.000.000.000.000 €');
 });
+
+test('should format `"12345678901234567.89"` without losing precision', () => {
+	assert.strictEqual(geld('12345678901234567.89'), '12.345.678.901.234.567,89 €');
+});
+
+test('should format `-0.001` as `"0 €"`', () => {
+	assert.strictEqual(geld(-0.001), '0 €');
+});
+
+test('should format `"-0.001"` as `"0 €"`', () => {
+	assert.strictEqual(geld('-0.001'), '0 €');
+});

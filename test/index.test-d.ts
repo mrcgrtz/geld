@@ -1,5 +1,5 @@
 import {expectType, expectNotType, expectError} from 'tsd';
-import geld from '../index.js';
+import geld, {type Options} from '../index.js';
 
 expectType<string>(geld(1));
 expectType<string>(geld('1'));
@@ -19,3 +19,7 @@ expectError(geld(1, {currencyPosition: 'between'}));
 
 expectType<string>(geld(1, {currency: null}));
 expectType<string>(geld(1, {zeroDecimals: null}));
+
+const options: Options = {currency: '$', currencyPosition: 'before'};
+expectType<string>(geld(1, options));
+expectError<Options>({decimals: '2'});

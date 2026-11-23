@@ -96,6 +96,16 @@ Type: `string`
 Character to use as a spacer between formatted value and currency symbol.
 Default: `' '` (i.e. `U+00A0 NO-BREAK SPACE`)
 
+### TypeScript
+
+The options type is exported as `Options`:
+
+```ts
+import geld, {type Options} from 'geld';
+
+const options: Options = {currency: '$', currencyPosition: 'before'};
+```
+
 ## FAQ
 
 ### “Why did you set these silly defaults? I prefer X.”

@@ -1,18 +1,14 @@
-declare namespace Geld {
-	type Options = {
-		currency?: string | null;
-		currencyPosition?: 'before' | 'after';
-		decimals?: number;
-		decimalSeparator?: string;
-		orderSeparator?: string;
-		zeroDecimals?: string | null;
-		space?: string;
-	};
-}
+export type Options = {
+	currency?: string | null;
+	currencyPosition?: 'before' | 'after';
+	decimals?: number;
+	decimalSeparator?: string;
+	orderSeparator?: string;
+	zeroDecimals?: string | null;
+	space?: string;
+};
 
-declare function geld(
+export default function geld(
 	value: number | string,
-	options?: Geld.Options
+	options?: Options
 ): string;
-
-export = geld;

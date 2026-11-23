@@ -1,3 +1,19 @@
+const formatters = new Map();
+
+function getFormatter(decimals) {
+	let formatter = formatters.get(decimals);
+	if (!formatter) {
+		formatter = new Intl.NumberFormat('en-US', {
+			minimumFractionDigits: decimals,
+			maximumFractionDigits: decimals,
+			signDisplay: 'negative',
+		});
+		formatters.set(decimals, formatter);
+	}
+
+	return formatter;
+}
+
 export default function geld(value, options = {}) {
 	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
 		return '';
@@ -19,11 +35,7 @@ export default function geld(value, options = {}) {
 	// Let Intl do rounding and digit grouping in a fixed locale,
 	// then swap in our own separators. Strings are passed as-is
 	// so Intl can treat them as exact decimals.
-	const parts = new Intl.NumberFormat('en-US', {
-		minimumFractionDigits: decimals,
-		maximumFractionDigits: decimals,
-		signDisplay: 'negative',
-	}).formatToParts(typeof value === 'string' ? value : Number(value));
+	const parts = getFormatter(decimals).formatToParts(typeof value === 'string' ? value : Number(value));
 
 	const fraction = parts.find(part => part.type === 'fraction')?.value;
 

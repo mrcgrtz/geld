@@ -105,3 +105,19 @@ test('should format `null` as empty string', () => {
 test('should format `undefined` as empty string', () => {
 	assert.strictEqual(geld(undefined), '');
 });
+
+test('should format `-200000` as `"-200.000 €"`', () => {
+	assert.strictEqual(geld(-200_000), '-200.000 €');
+});
+
+test('should format `-200.5` as `"-200,50 €"`', () => {
+	assert.strictEqual(geld(-200.5), '-200,50 €');
+});
+
+test('should format `1.005` as `"1,01 €"`', () => {
+	assert.strictEqual(geld(1.005), '1,01 €');
+});
+
+test('should format `1e21` without exponent notation', () => {
+	assert.strictEqual(geld(1e21, {decimals: 0}), '1.000.000.000.000.000.000.000 €');
+});

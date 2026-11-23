@@ -1,11 +1,11 @@
 declare namespace Geld {
 	type Options = {
-		currency?: string;
+		currency?: string | null;
 		currencyPosition?: 'before' | 'after';
 		decimals?: number;
 		decimalSeparator?: string;
 		orderSeparator?: string;
-		zeroDecimals?: string;
+		zeroDecimals?: string | null;
 		space?: string;
 	};
 }

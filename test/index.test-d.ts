@@ -16,3 +16,6 @@ expectError(geld(true));
 expectError(geld(1, {decimals: '3'}));
 expectError(geld(1, {orderSeparator: 1}));
 expectError(geld(1, {currencyPosition: 'between'}));
+
+expectType<string>(geld(1, {currency: null}));
+expectType<string>(geld(1, {zeroDecimals: null}));

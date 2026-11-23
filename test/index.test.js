@@ -133,3 +133,27 @@ test('should format `-0.001` as `"0 €"`', () => {
 test('should format `"-0.001"` as `"0 €"`', () => {
 	assert.strictEqual(geld('-0.001'), '0 €');
 });
+
+test('should format `0` as `"0 €"`', () => {
+	assert.strictEqual(geld(0), '0 €');
+});
+
+test('should format `"0"` as `"0 €"`', () => {
+	assert.strictEqual(geld('0'), '0 €');
+});
+
+test('should format `0` as `"0,- €"` with `zeroDecimals` set to `"-"`', () => {
+	assert.strictEqual(geld(0, {zeroDecimals: '-'}), '0,- €');
+});
+
+test('should format empty string as empty string', () => {
+	assert.strictEqual(geld(''), '');
+});
+
+test('should format whitespace-only string as empty string', () => {
+	assert.strictEqual(geld('  '), '');
+});
+
+test('should format `NaN` as empty string', () => {
+	assert.strictEqual(geld(NaN), '');
+});

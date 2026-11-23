@@ -15,7 +15,12 @@ function getFormatter(decimals) {
 }
 
 export default function geld(value, options = {}) {
-	if (!value || Number.isNaN(value) || Number.isNaN(Number(value))) {
+	if (
+		value === null
+		|| value === undefined
+		|| (typeof value === 'string' && value.trim() === '')
+		|| Number.isNaN(Number(value))
+	) {
 		return '';
 	}
 

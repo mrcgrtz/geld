@@ -45,6 +45,7 @@ Type: `number` or `string`
 
 Required value to format.
 Pass a string to keep full decimal precision, e.g. `'12345678901234567.89'`.
+Returns an empty string for `null`, `undefined`, empty strings and non-numeric values.
 
 #### options.currency
 
